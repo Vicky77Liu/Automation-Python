@@ -4,7 +4,7 @@ from yaml import SafeLoader
 
 class WriteUserCommand:
 
-    # read yaml file
+    # read user information yaml file
     def read_data(self):
         with open("../config/user_info.yaml") as file:
             user_info = yaml.load(file, Loader=SafeLoader)
@@ -27,7 +27,7 @@ class WriteUserCommand:
         return user_info
 
     # write data to yaml file
-    def write_data(self,device, bp, port):
+    def write_data(self, device, bp, port):
         user_info = self.join_data(device, bp, port)
         with open("../config/user_info.yaml", "a") as file:
             yaml.dump(user_info, file)
@@ -39,9 +39,9 @@ class WriteUserCommand:
         file.close()
 
 
+#if __name__ == '__main__':
+#    write = WriteUserCommand()
+   # data = write.read_data()
+    #write.clear_data()
+    # print(write.get_value('device_name'))
 
-if __name__ == '__main__':
-    write = WriteUserCommand()
-    data = write.read_data()
-    write.clear_data()
-    #print(write.get_value('device_name'))

@@ -23,18 +23,18 @@ class BaseDriver:
         return driver
 
     def ios_driver(self):
-        write_user_cmd = WriteUserCommand()
-        device_name = write_user_cmd.get_value("device_name")
-        port = write_user_cmd.get_value("port")
+        #write_user_cmd = WriteUserCommand()
+        #device_name = write_user_cmd.get_value("device_name")
+        #port = write_user_cmd.get_value("port")
         capabilities = {
-            "platformName": "Android",
-            "automationName": "UiAutomator2",  # 这样才能定位到toast
-            "deviceName": device_name,
-            "app": "/Users/kurt/Desktop/study/test_portnov/MobileTest/LookingBus_v0.6.23.8.apk",
-            "appWaitActivity": "com.seeing_bus_user_app.activities.MainActivity",
-            "noReset": "true"
+            "automationName": "XCUITest",
+            "platformName": "iOS",
+            "platformVersion": "16.0",
+            "deviceName": "iPhone Simulator",
+            "app": "/Users/kurt/Library/Developer/Xcode/DerivedData/Calculator-App-bvytqlwudydpngbndgsnmrrapwrx/Build"
+                   "/Products/Debug-iphonesimulator/Calculator-App.app",
         }
-        port_name = "http://127.0.0.1:{}/wd/hub".format(port)
+        port_name = "http://127.0.0.1:4723/wd/hub"
         driver = webdriver.Remote(port_name, capabilities)
         return driver
 

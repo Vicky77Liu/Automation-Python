@@ -1,0 +1,33 @@
+login_element:
+  username: id>com.seeing_bus_user_app:id/username
+  password: id>com.seeing_bus_user_app:id/password
+  login: id>com.seeing_bus_user_app:id/login
+  login_guest: id>com.seeing_bus_user_app:id/guest_login
+home:
+  hamburger: id>com.seeing_bus_user_app:id/nav_icon
+  pick_destination: id>com.seeing_bus_user_app:id/search_address_box
+  route: class>android.view.ViewGroup
+location:
+  current: id>com.seeing_bus_user_app:id/edit_origin
+  destination: id>com.seeing_bus_user_app:id/edit_destination
+  time: id>com.seeing_bus_user_app:id/time
+  search: id>com.seeing_bus_user_app:id/search
+navigation_drawer:
+  navigation_id: id>com.seeing_bus_user_app:id/username
+  user_account: xpath>//android.widget.CheckedTextView[@text='My Account']
+  home: xpath>//android.widget.CheckedTextView[@text='Home']
+  reservation: xpath>//android.widget.CheckedTextView[@text='My Reservations']
+  places: xpath>//android.widget.CheckedTextView[@text='My Places']
+  settings: xpath>//android.widget.CheckedTextView[@text='Settings']
+  feedback: xpath>//android.widget.CheckedTextView[@text='Feedback']
+  log_out: xpath>//android.widget.CheckedTextView[@text='Log Out']
+account:
+  hamburger_account: class>android.widget.ImageButton
+  first_name: id>com.seeing_bus_user_app:id/first_name
+  last_name: id>com.seeing_bus_user_app:id/last_name
+  special_condition: id>com.seeing_bus_user_app:id/system_spinner
+  check_mark: id>com.seeing_bus_user_app:id/fab
+  blind: xpath>//android.widget.CheckedTextView[@text='Blind']
+  visually_impaired: xpath>//android.widget.CheckedTextView[@text='Visually Impaired']
+  wheel_chair: xpath>//android.widget.CheckedTextView[@text='Wheel Chair']
+  none: xpath>//android.widget.CheckedTextView[@text='None']
